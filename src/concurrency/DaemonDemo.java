@@ -4,13 +4,11 @@ package concurrency;
  * Created by Administrator on 2019/2/14.
  */
 public class DaemonDemo {
-    public static void main(String[] args) throws InterruptedException{
+    public static void main(String[] args){
         Thread daemonThread = new Thread(()->{
             while(true){
                 try{
                     System.out.println("i am alive");
-                }catch (InterruptedException e){
-                    e.printStackTrace();
                 }finally {
                     System.out.println("finally block");
                 }
